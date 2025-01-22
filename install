@@ -1,1 +1,18 @@
+#!/bin/bash
+#######################################################################
+# Root
+allow_only_root()
+{
+  if [ "0$UID" -ne 0 ]; then
+     echo "Merci d'être en root pour lancer L'installation"; exit 1
+  fi
+}
+allow_only_root
+#######################################################################
 
+#######################################################################
+read -p "Discord sera executable sur votre machine après verification des dépendances. Terminer."
+echo "---"
+echo "Lancer la commande : tuxcord"
+echo "---"
+#######################################################################
